@@ -129,7 +129,6 @@ public class ConnectorPage extends BasePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(connectorElement).doubleClick().build().perform();
         Thread.sleep(4000);
-
     }
 
 }
