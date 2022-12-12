@@ -1,5 +1,6 @@
-package arcadia.pages;
+package arcadia.pages.ComponentDB.Connectors;
 
+import arcadia.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class ConnectorDetailsPage extends BasePage{
+public class ConnectorDetailsPage extends BasePage {
     public ConnectorDetailsPage(WebDriver driver) {
         super(driver);
     }
