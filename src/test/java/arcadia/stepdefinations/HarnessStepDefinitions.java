@@ -34,7 +34,7 @@ public class HarnessStepDefinitions {
         projectLanding.invokeCreateHarness();
         TestMapper mapper = conversionUtil.getTestMapperConfig(context.testIdentifier);
         arcadia.mapperObjects.CreateHarness createHarnessData = mapper.getCreateHarness();
-        createHarness.submitHarnessData(new Harness(createHarnessData.getWorkTask(), createHarnessData.getTitle(), createHarnessData.getDescription(), createHarnessData.getPartNumber(), createHarnessData.getRevision(), createHarnessData.getComponentDB()));
+        createHarness.submitHarnessData(new Harness(createHarnessData.getWorkTask(), createHarnessData.getTitle(), createHarnessData.getDescription(), createHarnessData.getPartNumber(), createHarnessData.getRevision(), createHarnessData.getProfile(),createHarnessData.getComponentDB()));
     }
 
 
