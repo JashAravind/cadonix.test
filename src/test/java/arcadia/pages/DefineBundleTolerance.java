@@ -175,7 +175,7 @@ public class DefineBundleTolerance extends BasePage {
         WebElement length = driver.findElement(By.name("bundle.length"));
         length.clear();
         length.sendKeys("150");
-        WebElement focus = driver.findElement(By.name("coverings.internaldia"));
+        WebElement focus = driver.findElement(By.name("bundle.allBendsRadius"));
         focus.clear();
         focus.sendKeys("200");
         WebElement lowertolerance = driver.findElement(By.name("bundle.lowerTolerance"));
