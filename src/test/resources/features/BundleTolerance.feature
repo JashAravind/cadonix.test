@@ -9,7 +9,7 @@ Feature: Bundle Tolerance
     And  Changing General units to <units>
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
-    And  Turning Visibility on for Bundle Tolerance
+    And user sets label 'Bundle tolerance' to "show"
     And  Navigating to Company profile page
     And  Navigating to created Project
     And  Checking the Bundle Tolerance Value
@@ -42,7 +42,7 @@ Feature: Bundle Tolerance
     And  Changing General units to <units>
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
-    And  Turning Visibility on for Bundle Tolerance
+    And user sets label 'Bundle tolerance' to "show"
     And  Navigating to Company profile page
     And  Navigating to created Project
     And  Checking the Bundle Tolerance Value
@@ -75,14 +75,14 @@ Feature: Bundle Tolerance
     And  Changing General units to <units>
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
-    And  Turning Visibility on for Bundle Tolerance
+    And user sets label 'Bundle tolerance' to "show"
     And  Navigating to Company profile page
     And  Navigating to created Project
     And Place the Frame
     And  Bundles are drawn
     And User exits the drawing page
     And Generating Formboard
-    And  Turning visibility on for Bundle tolerance in formboard
+    And user sets label 'Bundle tolerance' to "show" in formboard
     And  Getting the Values of Component Label
     Then Check the component label value
     And User exits the drawing page
@@ -100,14 +100,15 @@ Feature: Bundle Tolerance
     And  Changing General units to <units>
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
-    And  Turning Visibility on for Bundle Tolerance
+    And user sets label 'Bundle tolerance' to "show"
     And  Navigating to Company profile page
     And  Navigating to created Project
     And Place the Frame
     And  Bundles are drawn
     And User exits the drawing page
+    And Accept alert
     And Generating Formboard
-    And  Turning visibility on for Bundle tolerance in formboard
+    And user sets label 'Bundle tolerance' to "show" in formboard
     And Place the Frame
     And  Getting the Values of Component Label
     Then Check the component label value for Imperial task

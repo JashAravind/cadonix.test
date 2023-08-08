@@ -1,5 +1,7 @@
 package arcadia.utils;
 
+import org.decimal4j.util.DoubleRounder;
+
 import java.util.List;
 
 public class FormulaCalculator {
@@ -25,13 +27,14 @@ public class FormulaCalculator {
                     .orElse(0.0);
             // Wire bundle diameter = packing factor * SQRT (wire count) * avg wire diameter)
             Double wireBundleDiameter = packingFactor * squareRoot * averageDiameter;
-            bundleDiameter= Double.valueOf(Math.round(wireBundleDiameter));
+            bundleDiameter= Double.valueOf(DoubleRounder.round(wireBundleDiameter,2));
         }
 
         if(numberOfWires > 1 && numberOfWires<3){
             bundleDiameter = Double.valueOf(wireDiameter.stream()
                     .mapToDouble(d -> Double.parseDouble(d))
                     .sum());
+            bundleDiameter= Double.valueOf(DoubleRounder.round(bundleDiameter,2));
         }
         if(numberOfWires > 0 && numberOfWires<2){
             bundleDiameter = Double.valueOf(wireDiameter.get(0));

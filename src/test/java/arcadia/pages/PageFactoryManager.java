@@ -32,6 +32,7 @@ public class PageFactoryManager {
     private static UpdateCrossReference updateCrossReference;
     private static UpdateImagePage updateImagePage;
     private static LoadWiresPage loadWiresPage;
+    private static BundleOpsPage bundleOpsPage;
 
     public static SearchPartsDatabasePage getPartsDatabasePage(WebDriver driver){
         return searchPartsDatabasePage == null ? new SearchPartsDatabasePage(driver) : searchPartsDatabasePage;
@@ -119,4 +120,8 @@ public class PageFactoryManager {
     public static LoadWiresPage getLoadWiresPage(WebDriver driver){
         return loadWiresPage == null ? new LoadWiresPage(driver) :loadWiresPage;
     }
+    public static BundleOpsPage getBundleOpsPage(WebDriver driver){
+        return bundleOpsPage == null ? new BundleOpsPage(driver) :bundleOpsPage;
+    }
+
 }

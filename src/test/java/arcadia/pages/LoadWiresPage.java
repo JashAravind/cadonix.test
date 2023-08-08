@@ -401,4 +401,5 @@ public class LoadWiresPage extends BasePage {
         Assert.assertEquals(mismatchInformationClass.getAttribute("class"),"MismatchCav","Mismatch information colour is not matching as expected");
         customCommand.javaScriptClick(driver,closeLoadWiresSummaryReport);
     }
+
 }
