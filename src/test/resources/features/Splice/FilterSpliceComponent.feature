@@ -1,4 +1,4 @@
-@Regression
+@Regression @quickRegression
 Feature: Filter splice components
 
   @SpliceComponentDB

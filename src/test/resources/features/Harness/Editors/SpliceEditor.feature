@@ -1,4 +1,4 @@
-@Regression
+@Regression  @quickRegression
 @SpliceEditor
 Feature: Splice Editor
   Background: User is Logged In

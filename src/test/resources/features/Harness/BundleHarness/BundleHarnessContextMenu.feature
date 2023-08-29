@@ -1,4 +1,4 @@
-@Bundle
+@Bundle  @quickRegression
 Feature: Bundle harness Context Menu
 
   Background: User is Logged In

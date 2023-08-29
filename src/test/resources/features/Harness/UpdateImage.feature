@@ -1,4 +1,4 @@
-@updateImageViews @Regression
+@updateImageViews @Regression  @quickRegression
   Feature: Update Image Views
     Background: User is Logged In
       Given I'm on Arcadia test environment

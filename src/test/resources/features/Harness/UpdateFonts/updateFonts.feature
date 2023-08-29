@@ -1,4 +1,4 @@
-@Regression @UpdateFonts
+@Regression @UpdateFonts @quickRegression
 Feature: Update Fonts
   Background: User is Logged In
     Given I'm on Arcadia test environment

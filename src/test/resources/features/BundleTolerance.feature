@@ -1,4 +1,4 @@
-@Regression
+@Regression  @quickRegression
 Feature: Bundle Tolerance
 
   @BundleTolerance

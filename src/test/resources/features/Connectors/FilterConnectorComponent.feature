@@ -1,4 +1,4 @@
-@Regression
+@Regression  @quickRegression
 Feature: Filter connector components
 
   @ConnectorsComponentDB

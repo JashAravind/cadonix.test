@@ -1,4 +1,4 @@
-@Bundle
+@Bundle  @quickRegression
 Feature: Bundle harness Context Menu
 
   @VerifyBundleHarness @VerifyBundleContextMenu

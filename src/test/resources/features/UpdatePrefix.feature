@@ -8,5 +8,3 @@ Feature: Update Prefix
   And User selected 'COMPONENT PREFIX EDITOR' from General panel
   Then User capture the Identifier and Prefix from the UI
   And click on Edit button to edit the Identifier 'battery' and Prefix 'BAT'
-
-

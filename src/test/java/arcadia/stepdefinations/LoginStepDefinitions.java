@@ -262,4 +262,14 @@ public class LoginStepDefinitions {
     public void navigatedToFormBoardUpdateFonts() {
         loginPage.load(EndPoint.FORMBOARDUPDATFONTS.url.replace("profileName",System.getProperty("profileName")));
     }
+    @And("Navigated to profile splice configuration")
+    public void navigateToSpliceConfiguration(){
+        loginPage.load(EndPoint.PROFILESPLICECONFIG.url.replace("profileName",System.getProperty("profileName")));
+    }
+    @And("Navigated to material  gauge editor")
+    public void navigateToMaterialGauge(){
+        loginPage.load(EndPoint.MATERIALGAUGEEDITORPVC.url.replace("profileName",System.getProperty("profileName")));
+
+    }
+
 }

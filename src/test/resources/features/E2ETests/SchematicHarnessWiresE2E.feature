@@ -1,4 +1,4 @@
-@E2E
+@E2E  @quickRegression
 Feature: Verify schematics harness wires functionality
   Background: User is Logged In
     Given I'm on Arcadia test environment

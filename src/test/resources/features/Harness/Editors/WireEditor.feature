@@ -1,4 +1,4 @@
-@Regression
+@Regression  @quickRegression
 @WireEditor
 Feature: Wire Editor
   Background: User is Logged In
