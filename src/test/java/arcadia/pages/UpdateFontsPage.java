@@ -729,6 +729,7 @@ public class UpdateFontsPage extends BasePage {
     }
     public void bomTableOperations() throws InterruptedException {
         bomTableId();
+        Thread.sleep(2000);
         String id = bomTableId.getAttribute("id");
         WebElement getID =driver.findElement(By.xpath("//*[@id=\""+id+"\"]/thead/tr/th[1]"));
         customCommand.javaScriptClick(driver,drawSelectPointer);

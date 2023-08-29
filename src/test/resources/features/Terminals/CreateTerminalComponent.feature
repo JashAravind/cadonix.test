@@ -1,4 +1,4 @@
-@Regression
+@regression @quickregression
 Feature: Create terminal components
 
   @TerminalComponentDB

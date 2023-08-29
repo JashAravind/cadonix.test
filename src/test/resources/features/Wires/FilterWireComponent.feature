@@ -1,4 +1,4 @@
-@Regression
+@regression @quickregression
 Feature: Filter wire components
 
   @WireComponentDB

@@ -226,4 +226,5 @@ public class SpliceCavityTablePage extends BasePage {
         customCommand.pressKey(driver,"enter");
         customCommand.javaScriptClick(driver,buttonSubmitDetails);
     }
+
 }

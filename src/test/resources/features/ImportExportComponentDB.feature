@@ -1,4 +1,4 @@
-@Regression
+@regression  @quickregression
 Feature: Import Export Data for all components
 
   @ImportExportDB

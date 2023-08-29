@@ -433,8 +433,8 @@ public class SchematicsDrawingPage extends BasePage{
         customCommand.waitForElementVisibility(driver,divWireEditorPage);
     }
     public void changePrimaryColour() throws InterruptedException, AWTException {
-        (new WebDriverWait(driver, 10))
-               .until(ExpectedConditions.elementToBeClickable(buttonGoToDrawing));
+//        (new WebDriverWait(driver, 10))
+//               .until(ExpectedConditions.elementToBeClickable(buttonGoToDrawing));
         Thread.sleep(3000);
         customCommand.scrollIntoView(driver,headingPrimaryColour);
         List<WebElement> primaryColourColumns = driver.findElements(By.xpath("//tbody/tr/td[17]"));
@@ -466,8 +466,8 @@ public class SchematicsDrawingPage extends BasePage{
     }
 
     public void changeGaugeAndMaterial() throws InterruptedException, AWTException {
-       (new WebDriverWait(driver, 10))
-               .until(ExpectedConditions.elementToBeClickable(buttonGoToDrawing));
+//       (new WebDriverWait(driver, 10))
+//               .until(ExpectedConditions.elementToBeClickable(buttonGoToDrawing));
         Thread.sleep(2000);
         customCommand.scrollIntoView(driver,headingGauge);
         List<WebElement> gaugeColumns = driver.findElements(By.xpath("//tbody/tr/td[16]"));
@@ -576,7 +576,7 @@ public class SchematicsDrawingPage extends BasePage{
         Thread.sleep(2000);
         actions.moveToElement(right).click().perform();
         Thread.sleep(3000);
-        (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(wireId));
+//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(wireId));
         wireName.click();
         customCommand.clearAndEnterText(wireName,name);
         customCommand.javaScriptClick(driver,wireOkButton);

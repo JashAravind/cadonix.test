@@ -1,4 +1,4 @@
-@Regression
+@regression @quickregression
 Feature: Copy and Delete applicator components
 
   @ApplicatorsComponentDB

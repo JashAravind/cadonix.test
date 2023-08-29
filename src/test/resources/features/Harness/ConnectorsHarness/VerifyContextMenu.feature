@@ -1,4 +1,4 @@
-@Regression
+@regression
 Feature: Verify context menu
   Background: User is Logged In
     Given I'm on Arcadia test environment

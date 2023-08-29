@@ -1,4 +1,4 @@
-@Regression
+@regression  @quickregression
 Feature: Create connector components
 
  @ConnectorsComponentDB

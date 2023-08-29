@@ -34,6 +34,10 @@ public class ComponentDB {
         this.splittube = splittube;
         this.defaultlinefont = defaultlinefont;
     }
+    public ComponentDB(){
+
+    }
+
 
     public String getPartnumber() {
         return partnumber;

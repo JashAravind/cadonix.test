@@ -1,4 +1,4 @@
-@Regression
+@regression
 Feature: Link Other Parts
 
   @OtherPartsComponentDB

@@ -1,4 +1,4 @@
-@Regression @LoadWires
+@regression @LoadWires  @quickregression
 Feature: Load Wires
   Background:user logged in
     Given I'm on Arcadia test environment

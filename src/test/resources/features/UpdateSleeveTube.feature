@@ -1,4 +1,4 @@
-@Regression
+@regression @quickregresssion
 Feature: Update sleeve tube
 
   @UpdateSleeveTube

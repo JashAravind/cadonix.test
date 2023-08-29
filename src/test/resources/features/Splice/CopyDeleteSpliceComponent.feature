@@ -1,4 +1,4 @@
-@Regression
+@regression @quickregression
 Feature: Copy and Delete splice components
 
   @SpliceComponentDB

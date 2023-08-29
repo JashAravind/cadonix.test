@@ -170,4 +170,9 @@ public class BundleOpsStepDefinitions {
     public void checkMatchPropertiesWorkingOrNotAsExpectedWithBasicBundlePropertiesInCovering() throws InterruptedException, AWTException {
         bundleOpsPage.checkMatchPropertiesWorkingOrNotAsExpectedWithBasicBundlePropertiesInCovering();
     }
+
+    @Then("Reset to defaults")
+    public void resetToDefaults() throws InterruptedException {
+        bundleOpsPage.resetToDefaults();
+    }
 }

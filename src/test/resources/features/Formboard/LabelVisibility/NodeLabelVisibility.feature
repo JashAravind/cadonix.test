@@ -1,4 +1,4 @@
-@Regression @Nodeformboardlabelvisibility
+@regression @Nodeformboardlabelvisibility
 Feature: Form board node label visibility
   Background: User is Logged In
     Given I'm on Arcadia test environment

@@ -1,4 +1,4 @@
-@Regression
+@regression
 Feature: General Harness Connector Validations
   Background: User is Logged In
     Given I'm on Arcadia test environment

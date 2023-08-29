@@ -101,7 +101,7 @@ public class ComponentDBStepDefinitions {
         String csvQuery = "";
         String csvDirectoryPath = "src/test/resources/componentDB/TestData";
         new HeaderPanel(context.driver).openAddNewComponentPage();
-        ExtentCucumberAdapter.addTestStepLog(String.format("Component Name is "+ componentName+" bill type is "+componentBomBillType));
+       // ExtentCucumberAdapter.addTestStepLog(String.format("Component Name is "+ componentName+" bill type is "+componentBomBillType));
 
         //Adding component details
         csvQuery = "Select * from ComponentDetails where componentName='" + componentName.toLowerCase() + "'";

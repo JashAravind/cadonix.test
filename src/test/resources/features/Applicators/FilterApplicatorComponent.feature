@@ -1,4 +1,4 @@
-@Regression
+@regression @quickregression
 Feature: Filter applicator components
 
   @ApplicatorsComponentDB

@@ -1,4 +1,4 @@
-@Regression
+@regression
 Feature: Create junction part components
 
   @JunctionPartComponentDB
