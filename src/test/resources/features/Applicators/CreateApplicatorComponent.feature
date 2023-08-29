@@ -1,4 +1,4 @@
-@Regression @quickRegression
+@Regression @quickregression
 Feature: Create applicator components
 
  @ApplicatorsComponentDB

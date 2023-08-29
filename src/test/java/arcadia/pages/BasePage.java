@@ -16,11 +16,11 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
     public void load(String endPoint){
-        driver.get(ConfigLoader.getInstance().getBaseUrl() + System.getProperty("testInstance") +endPoint);
+        driver.get(ConfigLoader.getInstance().getBaseUrl() +endPoint);
     }
 
     public void load(){
-        driver.get(ConfigLoader.getInstance().getBaseUrl() + System.getProperty("testInstance"));
+        driver.get(ConfigLoader.getInstance().getBaseUrl() );
     }
 
 }

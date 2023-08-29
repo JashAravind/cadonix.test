@@ -6,7 +6,7 @@ Feature: Verify schematics
     And Created Project 'Aut_Integration'
     And test data config loaded for test identifier test14
 
-  @VerifySchematic @fix  @quickRegression
+  @VerifySchematic @fix  @quickregression
   Scenario: Test verifies wire label can be removed for schematic
     And Navigated to 'Aut_Integration' project
     And schematic with name 'Aut_Integration' is launched successfully
@@ -74,7 +74,7 @@ Feature: Verify schematics
     And switch on the colour of the wires
     And Verify the colour of the wires
 
-  @VerifySchematic  @quickRegression
+  @VerifySchematic  @quickregression
   Scenario: Test verifies harness can be created from schematic
     And Navigated to Schematic wire properties page
     And User updates the schematic wire properties

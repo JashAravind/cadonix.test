@@ -1,4 +1,4 @@
-@Bundle  @quickRegression
+@Bundle  @quickregression
 Feature: Bundle harness general validations
 
   @VerifyBundleHarness

@@ -1,4 +1,4 @@
-@Regression  @quickRegression
+@Regression  @quickregression
 @ConnectorEditor
 Feature: Connector Editor
   Background: User is Logged In

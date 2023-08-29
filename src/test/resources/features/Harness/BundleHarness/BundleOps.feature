@@ -1,4 +1,4 @@
-@Regression @BundleOps  @quickRegression
+@Regression @BundleOps  @quickregression
 Feature: Bundle Operation
   Background: User is Logged In
     Given I'm on Arcadia test environment

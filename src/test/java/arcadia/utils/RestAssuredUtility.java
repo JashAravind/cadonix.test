@@ -24,7 +24,7 @@ public class RestAssuredUtility {
         RestAssured.baseURI = BASE_URL;
         RequestSpecification request = RestAssured.given();
         String cookie=getCookie(driver);
-        request.header("authority","qa.cadonix.online");
+        request.header("authority","securitytest.cadonix.online");
         request.header("accept","application/json");
         request.header("content-type","application/json");
         request.header("cookie", "ArchonixAuth="+cookie+"");
@@ -37,7 +37,7 @@ public class RestAssuredUtility {
         RestAssured.baseURI = BASE_URL;
         RequestSpecification request = RestAssured.given();
         String cookie=getCookie(driver);
-        request.header("authority","qa.cadonix.online");
+        request.header("authority","securitytest.cadonix.online");
         request.header("accept","application/json");
         request.header("content-type","application/x-www-form-urlencoded; charset=UTF-8");
         request.header("cookie", "ArchonixAuth="+cookie+"");
@@ -51,7 +51,7 @@ public class RestAssuredUtility {
         RestAssured.baseURI = BASE_URL;
         RequestSpecification request = RestAssured.given();
         String cookie=getCookie(driver);
-        request.header("authority","qa.cadonix.online");
+        request.header("authority","securitytest.cadonix.online");
         request.header("accept","application/json");
         request.header("content-type","application/x-www-form-urlencoded; charset=UTF-8");
         request.header("cookie", "ArchonixAuth="+cookie+"");
