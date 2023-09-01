@@ -1,11 +1,14 @@
 package arcadia.pages;
 
 import arcadia.utils.SeleniumCustomCommand;
+import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.awt.*;
 
@@ -37,8 +40,16 @@ public class SpliceConfigPage extends BasePage {
     @FindBy(css = "#gaugeTable > tbody > tr:nth-child(22) > td:nth-child(3) > input")private WebElement gaugeEditorCSA;
     @FindBy(css="#gaugeTable > tbody > tr:nth-child(22) > td:nth-child(4) > input")private WebElement gaugeEditorResistivity;
     @FindBy(css="#idselectform > div.box-footer > div > button")private WebElement gaugeEditorSaveButton;
-    String spliceTechnology = "AutomationTest";
+    @FindBy(css="#body > div:nth-child(42)")private WebElement updateSpliceDialogBox;
+    @FindBy(css="#spliceconfigbox")private WebElement updateSpliceCheckBox;
+    @FindBy(css="#btnFotter > button")private WebElement dialogBoxSubmitButton;
+    @FindBy(css="#rightPaneContent")private WebElement summaryReportDynamicForm;
+    @FindBy(css="#ui-accordion-accordion-panel-1 > table > tbody > tr > td:nth-child(2)")private WebElement errorMessageSummaryReport;
+    @FindBy(css = "button[title=\"Submit\"]")
+    private WebElement buttonSubmitDetails;
+    String spliceTechnology = "Ultrasonic";
     String stringWireMaterial ="PVC";
+    String actualAside ,actualBside;
     public void addNewSpliceConfigurationInProfile() throws InterruptedException, AWTException {
         Object rowCount = js.executeScript("return document.querySelector('#GRIDspliceconfiguration > tbody').childElementCount");
         int rowCountToInt = Integer.parseInt(rowCount.toString());
@@ -65,8 +76,8 @@ public class SpliceConfigPage extends BasePage {
         customCommand.clearAndEnterText(spliceConfigurationInputBox,"18-2,16-1/18-2");
         customCommand.javaScriptClick(driver,getConfigASideBSide);
         customCommand.javaScriptClick(driver,updateComponent);
-        System.out.println(compDBASideCsa.getAttribute("value"));
-        System.out.println(compDBBSideCsa.getAttribute("value"));
+        actualAside =  compDBASideCsa.getAttribute("value");
+        actualBside = compDBBSideCsa.getAttribute("value");
         Thread.sleep(5000);
     }
 
@@ -83,4 +94,31 @@ public class SpliceConfigPage extends BasePage {
         customCommand.enterText(gaugeEditorResistivity,"1.10");
         customCommand.javaScriptClick(driver,gaugeEditorSaveButton);
     }
+
+    public void verifySpliceConfigurationOfAsideAndBsideIsCalculatedAsPerTheGaugeEditorCsa() {
+        Assert.assertEquals(actualAside,"4.10","A side CSA calculation value is not expected");
+        Assert.assertEquals(actualBside,"2.00","B side CSA calculation value is not expected");
+    }
+    public void spliceHeatShrinkFromContextMenuOptions() throws InterruptedException {
+        String spliceId = new ConnectorPage(driver).getSpliceElementIdsFromDrawingPage().get(Integer.parseInt(String.valueOf(0))).getSpliceId();
+        WebElement ele=driver.findElement(By.xpath("//*[name()='g' and @id='"+spliceId+"']/*[name()='rect']"));
+        new HarnessPage(driver).getContextMenu(spliceId,ele);
+        Thread.sleep(2000);
+        new HarnessPage(driver).performOperation("Splice/Heat Shrink",spliceId);
+    }
+
+    public void verifyErrorMessage(String errorMessage) throws InterruptedException {
+        Thread.sleep(3000);
+        Assert.assertTrue(summaryReportDynamicForm.isDisplayed(),"Summary Report is not visible for splice");
+        Assert.assertEquals(errorMessageSummaryReport.getText(),errorMessage,"Error message is not visible as expected");
+    }
+
+    public void verifyAbleToViewUpdateSpliceHeatshrinkConfigurationPopup() {
+        Assert.assertTrue(updateSpliceDialogBox.isDisplayed(),"Update Splice/Heat-shrink dialog box is not able to view");
+        Select library = new Select(driver.findElement(By.cssSelector("#updateSpliceHeatShrink > div.formDiv > div:nth-child(1) > select")));
+        library.selectByValue(System.getProperty("componentDB"));
+        updateSpliceCheckBox.click();
+        buttonSubmitDetails.click();
+    }
 }
+

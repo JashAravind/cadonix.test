@@ -24,7 +24,7 @@ import java.util.List;
 public class SpliceConfigStepDefinitions {
     private final TestContext context;
     private final SpliceConfigPage spliceConfigPage;
-    String splicePartNumber = "spliceConfigAutomationTest";
+    String splicePartNumber = "spliceConfigAutomationTestUltra";
     public SpliceConfigStepDefinitions(TestContext context){
         this.context = context;
         spliceConfigPage = PageFactoryManager.getSpliceConfig(context.driver);
@@ -80,5 +80,25 @@ public class SpliceConfigStepDefinitions {
     @Then("verify able to modify material and gauge")
     public void verifyAbleToModifyMaterialAndGauge() throws AWTException, InterruptedException {
         spliceConfigPage.modifyGaugeEditor();
+    }
+
+    @Then("verify splice configuration of Aside and Bside is calculated as per the gauge editor csa")
+    public void verifySpliceConfigurationOfAsideAndBsideIsCalculatedAsPerTheGaugeEditorCsa() {
+        spliceConfigPage.verifySpliceConfigurationOfAsideAndBsideIsCalculatedAsPerTheGaugeEditorCsa();
+    }
+
+    @And("splice,heatshrink from context menu options")
+    public void spliceHeatshrinkFromContextMenuOptions() throws InterruptedException {
+        spliceConfigPage.spliceHeatShrinkFromContextMenuOptions();
+    }
+
+    @Then("verify able to view update splice,heatshrink configuration popup")
+    public void verifyAbleToViewUpdateSpliceHeatshrinkConfigurationPopup() {
+        spliceConfigPage.verifyAbleToViewUpdateSpliceHeatshrinkConfigurationPopup();
+    }
+
+    @Then("verify able to throw error {string}")
+    public void verifyErrorMessage(String errorMessage) throws InterruptedException {
+        spliceConfigPage.verifyErrorMessage(errorMessage);
     }
 }

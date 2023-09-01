@@ -41,7 +41,7 @@ public class cleanComponentDB  extends BasePage {
                     if(isModelPresent){
                         WebElement deleteSuccessBodyOk = driver.findElement(By.cssSelector("button[data-bb-handler=\"ok\"]"));
                         deleteSuccessBodyOk.click();
-                        Thread.sleep(3000);
+                        Thread.sleep(5000);
                         break;
                     }
                     Thread.sleep(3000);

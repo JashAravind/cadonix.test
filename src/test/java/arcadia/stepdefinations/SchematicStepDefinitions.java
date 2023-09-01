@@ -599,6 +599,9 @@ public class SchematicStepDefinitions {
              case "Load Wires":
                 harnessFilePath = "src/test/resources/drawingboard/loadwires.hrx";
                 break;
+            case "splice different wire material":
+                harnessFilePath= "src/test/resources/drawingboard/differentWireMaterialSpliceConfig.hrx";
+                break;
 
         }
         schematicsDrawingPage.importHarness(harnessFilePath);
