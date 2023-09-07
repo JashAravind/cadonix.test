@@ -7,14 +7,12 @@ Feature: Bundle Tolerance
     And  test data config loaded for test identifier <string>
     And  Navigated to General task units
     And  Changing General units to <units>
+    And  Navigating to Company profile page
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
     And user sets label 'Bundle tolerance' to "show"
-    And  Navigating to Company profile page
-    And  Navigating to created Project
     And  Checking the Bundle Tolerance Value
     Then Check the Bundle Tolerance Value as per the Company Profile
-    And  Place the Frame
     And  Bundles are drawn
     And  Inspecting Bundle
     Then Check outside focus changes lower tolerance and Upper tolerance
@@ -40,14 +38,12 @@ Feature: Bundle Tolerance
     And  test data config loaded for test identifier <string>
     And  Navigated to General task units
     And  Changing General units to <units>
+    And  Navigating to Company profile page
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
     And user sets label 'Bundle tolerance' to "show"
-    And  Navigating to Company profile page
-    And  Navigating to created Project
     And  Checking the Bundle Tolerance Value
     Then Check the Bundle Tolerance Value as per the Company Profile
-    And  Place the Frame
     And  Bundles are drawn
     And  Inspecting Bundle Tolerance Value for Imperial task
     Then Check outside focus changes lower tolerance and Upper tolerance for Imperial task
@@ -73,12 +69,10 @@ Feature: Bundle Tolerance
     And  test data config loaded for test identifier <string>
     And  Navigated to General task units
     And  Changing General units to <units>
+    And  Navigating to Company profile page
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
     And user sets label 'Bundle tolerance' to "show"
-    And  Navigating to Company profile page
-    And  Navigating to created Project
-    And Place the Frame
     And  Bundles are drawn
     And User exits the drawing page
     And Generating Formboard
@@ -98,12 +92,10 @@ Feature: Bundle Tolerance
     And  test data config loaded for test identifier <string>
     And  Navigated to General task units
     And  Changing General units to <units>
+    And  Navigating to Company profile page
     And  Navigated to quickstart project
     And  harness with name <taskDescription> is launched successfully
     And user sets label 'Bundle tolerance' to "show"
-    And  Navigating to Company profile page
-    And  Navigating to created Project
-    And Place the Frame
     And  Bundles are drawn
     And User exits the drawing page
     And Accept alert

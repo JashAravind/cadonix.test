@@ -147,12 +147,6 @@ public class DefineBundleTolerance extends BasePage {
         customCommand.clearAndEnterText(lenghtrange2uppertolerance,"10");
         upperToleranceTwo_1 = "10";
         saveButton.click();
-        WebElement pagination = driver.findElement(By.xpath("//button[@type='button']"));
-        pagination.click();
-        WebElement selectall = driver.findElement(By.xpath("//a[normalize-space()='All']"));
-        selectall.click();
-        WebElement checkbutton = driver.findElement(By.xpath("//*[@id=\"chbox\"]"));
-        checkbutton.click();
         saveButton.click();
     }
 

@@ -70,12 +70,6 @@ public class LoginStepDefinitions {
 
     @And("Navigating to Company profile page")
     public void navigateToSettings() throws InterruptedException {
-        loginPage.load(EndPoint.SETTINGS.url);
-        try {
-            context.driver.switchTo().alert().accept();
-        }catch(org.openqa.selenium.NoSuchElementException e){
-            Thread.sleep(2000);
-        }
         loginPage.load(EndPoint.BUNDLEDEFAULTDISPLAY.url.replace("profileName",System.getProperty("profileName")));
         Thread.sleep(1000);
         new DefineBundleTolerance(context.driver).CaptureModifyBundleTolerance();

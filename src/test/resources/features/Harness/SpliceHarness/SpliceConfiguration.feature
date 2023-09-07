@@ -35,3 +35,4 @@
       Then verify able to view update splice,heatshrink configuration popup
       Then verify able to throw error 'Wire CSA value exceeds the maximum CSA range for the Splice SP-001 in AutomationTest technology.'
       And User exits the drawing page
+

@@ -3,6 +3,10 @@ Feature: Bundle Operation
   Background: User is Logged In
     Given I'm on Arcadia test environment
 
+  Scenario: Test verifies task can be created in metric by changing in profile
+    And  Navigated to General task units
+    And  Changing General units to 'metric'
+
   Scenario: Test verifies add bend and remove bend in bundle
     And Navigated to quickstart project
     And harness with name 'Bundle Ops Validator' is launched successfully

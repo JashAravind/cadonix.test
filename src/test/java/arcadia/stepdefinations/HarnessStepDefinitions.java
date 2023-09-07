@@ -56,7 +56,7 @@ public class HarnessStepDefinitions {
         String harnessDescription = connectorDescription.concat(" "+ new StringHelper().generateRandomDigit());
         createNewHarnessInstance(harnessDescription);
         getHarnessDescription = harnessDescription;
-        Thread.sleep(3000);
+        Thread.sleep(4000);
     }
 
     private void createNewHarnessInstance(String connectorDescription) throws InterruptedException {
