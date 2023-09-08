@@ -5,6 +5,8 @@ import arcadia.pages.ComponentDB.CommonElements;
 import arcadia.pages.ComponentDB.HeaderPanel;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 public class PageFactoryManager {
     private static LoginPage loginPage;
     private static ProjectLanding projectLanding;
@@ -128,7 +130,7 @@ public class PageFactoryManager {
     public static SpliceConfigPage getSpliceConfig(WebDriver driver){
         return spliceConfigPage == null ? new SpliceConfigPage(driver) :spliceConfigPage;
     }
-    public static PostMigrationPage getPostMigrationPage(WebDriver driver){
+    public static PostMigrationPage getPostMigrationPage(WebDriver driver) throws IOException {
         return postMigrationPage == null ? new PostMigrationPage(driver) :postMigrationPage;
     }
 

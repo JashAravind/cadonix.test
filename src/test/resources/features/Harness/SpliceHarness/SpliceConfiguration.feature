@@ -1,7 +1,6 @@
 @spliceConfiguration
   Feature: Splice Configuration
 
-
     Scenario:Test verifies able to configure new splice technology in in profile
       Given I'm on Arcadia test environment
       And  Navigated to profile splice configuration
@@ -35,4 +34,4 @@
       Then verify able to view update splice,heatshrink configuration popup
       Then verify able to throw error 'Wire CSA value exceeds the maximum CSA range for the Splice SP-001 in AutomationTest technology.'
       And User exits the drawing page
-
+      And User deletes Harness 'SchematicHarness' successfully
