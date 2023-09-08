@@ -34,6 +34,7 @@ public class PageFactoryManager {
     private static LoadWiresPage loadWiresPage;
     private static BundleOpsPage bundleOpsPage;
     private static SpliceConfigPage spliceConfigPage;
+    private static PostMigrationPage postMigrationPage;
 
     public static SearchPartsDatabasePage getPartsDatabasePage(WebDriver driver){
         return searchPartsDatabasePage == null ? new SearchPartsDatabasePage(driver) : searchPartsDatabasePage;
@@ -126,6 +127,9 @@ public class PageFactoryManager {
     }
     public static SpliceConfigPage getSpliceConfig(WebDriver driver){
         return spliceConfigPage == null ? new SpliceConfigPage(driver) :spliceConfigPage;
+    }
+    public static PostMigrationPage getPostMigrationPage(WebDriver driver){
+        return postMigrationPage == null ? new PostMigrationPage(driver) :postMigrationPage;
     }
 
 }
