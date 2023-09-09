@@ -1,7 +1,9 @@
 package arcadia.pages;
 
+import arcadia.constants.EndPoint;
 import arcadia.utils.SeleniumCustomCommand;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 
@@ -20,6 +22,7 @@ public class PostMigrationPage extends BasePage  {
 
     SeleniumCustomCommand customCommand = new SeleniumCustomCommand();
     HarnessPage harnessPage =new HarnessPage(driver);
+    LoginPage loginPage = new LoginPage(driver);
     public PostMigrationPage(WebDriver driver) throws IOException {
         super(driver);
     }
@@ -46,22 +49,26 @@ public class PostMigrationPage extends BasePage  {
         Thread.sleep(2000);
         Object countOfProject = js.executeScript("return document.querySelector('#example-tables > div.tabulator-tableholder > div').childElementCount");
         availableProjectCount = Integer.parseInt(countOfProject.toString());
-
+        Actions actions = new Actions(driver);
         for (int i = 1; i <= availableProjectCount; i++) {
-
+            if(i %8 == 0) {
+                loginPage.load(EndPoint.LOGOUT.url);
+                loginPage.load();
+                loginPage.Login();
+                Thread.sleep(2000);
+                loginPage.load(EndPoint.PROJECTHOMEPAGE.url);
+            }
             WebElement customLevelProject = driver.findElement(By.cssSelector("#example-tables > div.tabulator-tableholder > div > div:nth-child("+i+")"));
             WebElement project = driver.findElement(By.cssSelector("#example-tables > div.tabulator-tableholder > div > div:nth-child(" + i + ") > div:nth-child(2)"));
-
+            actions.moveToElement(project);
             if (!Objects.equals(customLevelProject.getAttribute("style"), "padding-left: 0px; background-color: rgb(244, 244, 244); border-bottom: 1px solid white;")) {
                 count++;
                 try {
-                    WebElement projectName = driver.findElement(By.cssSelector("#example-tables > div.tabulator-tableholder > div > div:nth-child("+i+") > div:nth-child(1)"));
+                    WebElement projectName = driver.findElement(By.cssSelector("#example-tables > div.tabulator-tableholder > div > div:nth-child(" + i + ") > div:nth-child(1)"));
                     wr.newLine();
                     wr.write("Project Name :" + projectName.getText());
                     wr.newLine();
-                }
-                catch (NoSuchElementException e)
-                {
+                } catch (NoSuchElementException e) {
                     Thread.sleep(100);
                 }
                 project.click();
@@ -83,7 +90,7 @@ public class PostMigrationPage extends BasePage  {
                         } catch (ElementClickInterceptedException e) {
                             System.out.println(driver.getCurrentUrl());
                             wr.newLine();
-                            wr.write("Blocker crash/Some issue task details:  " +driver.getCurrentUrl());
+                            wr.write("Blocker crash/Some issue task details:  " + driver.getCurrentUrl());
                             driver.navigate().back();
                         }
                     }
@@ -109,14 +116,14 @@ public class PostMigrationPage extends BasePage  {
                             Thread.sleep(1000);
                         } catch (ElementClickInterceptedException e) {
                             wr.newLine();
-                            wr.write("Blocker crash/Some issue task details:  " +driver.getCurrentUrl());
+                            wr.write("Blocker crash/Some issue task details:  " + driver.getCurrentUrl());
                             driver.navigate().back();
                         }
                     }
                 } catch (NoSuchElementException e) {
                     System.out.println("Schematic task count : 0");
                     wr.newLine();
-                   wr.write("Schematic task count : 0");
+                    wr.write("Schematic task count : 0");
                     Thread.sleep(1000);
                 }
 
@@ -128,14 +135,15 @@ public class PostMigrationPage extends BasePage  {
                     wr.newLine();
                     wr.write("Harness task count :" + c.size());
                     wr.newLine();
-                    for (int k = 1; k < c.size(); k++) {
+                    for (int k = 1; k <= c.size(); k++) {
                         WebElement harDel = driver.findElement(By.cssSelector("#tableHAR > tbody > tr:nth-child(" + k + ") > td:nth-child(2)"));
-                        harDel.click();
+//                        harDel.click();
+                        customCommand.javaScriptClick(driver, harDel);
                         Thread.sleep(5000);
                         try {
                             harnessPage.exitDrawingPage();
                         } catch (ElementClickInterceptedException e) {
-                            wr.write("Blocker crash/Some issue task details:  " +driver.getCurrentUrl());
+                            wr.write("Blocker crash/Some issue task details:  " + driver.getCurrentUrl());
                             wr.newLine();
                             Thread.sleep(2000);
                             driver.navigate().back();

@@ -59,6 +59,10 @@ public class LoginStepDefinitions {
     public void navigateToProjectHomePage(){
         loginPage.load(EndPoint.PROJECTHOMEPAGE.url);
     }
+    @And("User logout")
+    public void logoutTheApplication(){
+        loginPage.load(EndPoint.LOGOUT.url);
+    }
     @And("Navigated to General task units")
     public void navigatedToGeneralTaskUnits() {
         loginPage.load(EndPoint.TASKUNITS.url.replace("profileName",System.getProperty("profileName")));

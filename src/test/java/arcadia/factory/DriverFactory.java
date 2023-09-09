@@ -28,6 +28,7 @@ public class DriverFactory {
                 ChromeOptions options = new ChromeOptions();
                 options.setExperimentalOption("prefs", prefs);
                 options.addArguments("--remote-allow-origins=*");
+               // options.addArguments("--headless");
               //  options.setBrowserVersion("117");
                 driver = new ChromeDriver(options);
                 driver.manage().window().maximize();

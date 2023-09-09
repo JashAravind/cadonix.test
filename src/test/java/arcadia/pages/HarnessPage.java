@@ -744,6 +744,7 @@ public class HarnessPage extends BasePage{
     public void exitDrawingPage() throws InterruptedException {
         Thread.sleep(2000);
         getHeaderElement("Exit").click();
+        customCommand.scrollIntoView(driver,buttonExitDrawing);
         customCommand.waitForElementVisibility(driver,buttonExitDrawing);
         buttonExitDrawing.click();
         Thread.sleep(2000);

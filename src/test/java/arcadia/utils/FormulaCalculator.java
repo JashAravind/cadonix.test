@@ -46,4 +46,12 @@ public class FormulaCalculator {
         return Double.valueOf((Math.round((baseValue*diameterScales)+diameterAddon)));
     }
 
+    public Double getSpliceFitPercentageASide(Double bundleDiameterASide,Double sleeveTubeRecoverDiameter){
+        return bundleDiameterASide *100/sleeveTubeRecoverDiameter;
+    }
+
+    public Double getSpliceFitPercentageBSide(Double bundleDiameterBSide,Double sleeveTubeRecoverDiameter){
+        return bundleDiameterBSide *100/sleeveTubeRecoverDiameter;
+    }
+
 }
