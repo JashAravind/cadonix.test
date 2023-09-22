@@ -605,6 +605,9 @@ public class SchematicStepDefinitions {
             case "physical splice":
                 harnessFilePath= "src/test/resources/drawingboard/physicalsplice.hrx";
                 break;
+            case "Move relative":
+                harnessFilePath= "src/test/resources/drawingboard/moverelative.hrx";
+                break;
         }
         schematicsDrawingPage.importHarness(harnessFilePath);
     }
