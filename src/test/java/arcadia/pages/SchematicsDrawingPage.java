@@ -803,7 +803,8 @@ public class SchematicsDrawingPage extends BasePage{
         driver.switchTo().frame(iframe);
     }
 
-    public void verifyDrawingsListPageLoaded() {
+    public void verifyDrawingsListPageLoaded() throws InterruptedException {
+        driver.navigate().refresh();
         customCommand.longWaitForElementToBeClickable(driver,createSchematic);
         WebElement eleDrawingHeading=driver.findElement(By.xpath("//h3[text()=' Drawings']"));
         customCommand.waitForElementVisibility(driver,eleDrawingHeading);
@@ -944,7 +945,7 @@ public class SchematicsDrawingPage extends BasePage{
 
 
     public void importHarness(String harnessFilePath) throws InterruptedException {
-        customCommand.longWaitForElementToBeClickable(driver,importTools);
+        customCommand.waitForElementVisibility(driver,importTools);
         customCommand.javaScriptClick(driver,importTools);
         customCommand.moveToElementAndClick(driver,importTask);
         switchToFrame();

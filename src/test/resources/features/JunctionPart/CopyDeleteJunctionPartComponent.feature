@@ -1,4 +1,4 @@
-@regression
+@regression @componentdb
 Feature: Copy and Delete junction part components
 
   @JunctionPartComponentDB

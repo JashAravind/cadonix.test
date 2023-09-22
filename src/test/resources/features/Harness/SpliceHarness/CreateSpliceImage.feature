@@ -1,4 +1,4 @@
-@regression
+@regression @hfb
 Feature: Create splice harness
 
   Background: User is Logged In

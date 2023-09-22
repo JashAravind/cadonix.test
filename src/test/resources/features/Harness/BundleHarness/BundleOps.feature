@@ -1,4 +1,4 @@
-@regression @BundleOps  @quickregression
+@regression @BundleOps  @quickregression @hfb
 Feature: Bundle Operation
   Background: User is Logged In
     Given I'm on Arcadia test environment
@@ -124,6 +124,8 @@ Feature: Bundle Operation
     And User deletes Harness 'Bundle Ops Validator' successfully
 
   Scenario: Test verifies to bundle content of bundle properties
+    And Navigated to General task units
+    And Changing General units to 'metric'
     And Navigated to quickstart project
     And harness with name 'Bundle Ops Validator' is launched successfully
     And test data config loaded for test identifier test102
@@ -148,7 +150,7 @@ Feature: Bundle Operation
     And Accept alert
     And User deletes Harness 'Bundle Ops Validator' successfully
 
-  Scenario: Test verifies to bundle content on bundle associated wires
+  Scenario: Test verifies to bundle content on bundle associated wiresF
     And Navigated to quickstart project
     And harness with name 'Bundle Ops Validator' is launched successfully
     And test data config loaded for test identifier test102
@@ -160,6 +162,8 @@ Feature: Bundle Operation
     And User deletes Harness 'Bundle Ops Validator' successfully
 
     Scenario: Test Verifies match bundle properties
+      And Navigated to General task units
+      And Changing General units to 'metric'
       And Navigated to quickstart project
       And harness with name 'Bundle Ops Validator' is launched successfully
       And test data config loaded for test identifier test102

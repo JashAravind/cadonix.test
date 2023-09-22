@@ -28,7 +28,9 @@ public class ConfigLoader {
     }
 
     public String getBaseUrl(){
-        String prop = properties.getProperty("baseUrl");
+        //String prop = properties.getProperty("baseUrl");
+        //Added as environment variable because there is request to run automation in different environments
+        String prop = "https://"+System.getProperty("url")+"/";
         if(prop != null) return prop;
         else throw new RuntimeException("property baseUrl is not specified in the stage_config.properties file");
     }

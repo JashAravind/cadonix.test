@@ -47,7 +47,8 @@ public class UpdateCrossReferenceStepDefinitions {
     }
 
     @Then("check update cross reference part number value for combination {string}")
-    public void checkUpdateCrossReferencePartNumberValueForCombination(String combination) {
+    public void checkUpdateCrossReferencePartNumberValueForCombination(String combination) throws InterruptedException {
+        Thread.sleep(3000);
         updateCrossReference.checkUpdateCrossReferencePartNumberValueForCombination(combination);
     }
 
@@ -58,7 +59,8 @@ public class UpdateCrossReferenceStepDefinitions {
     }
 
     @Then("check terminal update cross reference part number value for combination {string}")
-    public void checkTerminalUpdateCrossReferencePartNumberValueForCombination(String  combination) {
+    public void checkTerminalUpdateCrossReferencePartNumberValueForCombination(String  combination) throws InterruptedException {
+        Thread.sleep(3000);
         updateCrossReference.checkTerminalUpdateCrossReferencePartNumberValueFor(combination);
     }
 
@@ -68,7 +70,7 @@ public class UpdateCrossReferenceStepDefinitions {
     }
 
     @Then("check plug update cross reference part number value for combination {string}")
-    public void checkPlugUpdateCrossReferencePartNumberValueForCombination(String combination) {
+    public void checkPlugUpdateCrossReferencePartNumberValueForCombination(String combination) throws InterruptedException {
         updateCrossReference.checkPlugUpdateCrossReferencePartNumberValueFor(combination);
     }
 }

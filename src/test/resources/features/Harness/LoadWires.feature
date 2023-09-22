@@ -1,4 +1,4 @@
-@regression @LoadWires  @quickregression
+@regression @NodeOperation  @quickregression @hfb
 Feature: Load Wires
   Background:user logged in
     Given I'm on Arcadia test environment
@@ -18,7 +18,7 @@ Feature: Load Wires
 
   Scenario: Test Verifies to check remove existing wires off in load wires
     And Navigated to quickstart project
-    And User import schematic 'loadwires 1' task
+    And User import schematic 'loadwires 2' task
     And User imports harness 'Load Wires'
     And user navigated to newly created harness
     And Load wires is opened
@@ -30,7 +30,7 @@ Feature: Load Wires
 
   Scenario: Test Verifies to check remove existing wires on in load wires
     And Navigated to quickstart project
-    And User import schematic 'loadwires 1' task
+    And User import schematic 'loadwires 2' task
     And User imports harness 'Load Wires'
     And user navigated to newly created harness
     And Load wires is opened

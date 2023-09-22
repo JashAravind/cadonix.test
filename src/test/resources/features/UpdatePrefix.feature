@@ -1,4 +1,4 @@
-@regression
+@regression @hfb
 Feature: Update Prefix
 
   @FilterComponent

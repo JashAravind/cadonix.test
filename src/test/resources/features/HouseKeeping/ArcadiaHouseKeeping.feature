@@ -1,4 +1,4 @@
-@HouseKeeping
+@HouseKeeping @housekeeping
 Feature: House Keeping
   Background: User is Logged In
     Given I'm on Arcadia test environment

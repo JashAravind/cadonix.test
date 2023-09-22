@@ -19,6 +19,7 @@ public class SpliceCavityTableLabelStepDefinitions {
 
     @Then("Verify splice cavity {string} label is {string} or not")
     public void verifySpliceCavityLabelIsVisibleOrNot(String labelName, String visibleHide) throws InterruptedException, AWTException, JsonProcessingException {
+       Thread.sleep(3000);
         spliceCavityTablePage.verifySplicerCavityTableIsVisibleOrNot(labelName, visibleHide);
     }
 

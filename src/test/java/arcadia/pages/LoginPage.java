@@ -16,12 +16,13 @@ public class LoginPage extends BasePage{
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-    public  void Login(){
+    public  void Login() throws InterruptedException {
         new WebDriverWait(driver, Duration.ofSeconds(2000)).until(ExpectedConditions.elementToBeClickable(userName));
         System.out.println("component is " + System.getProperty("componentDB"));
         userName.sendKeys(System.getProperty("userName"));
         passWord.sendKeys(System.getProperty("password"));
         submitButton.click();
+        Thread.sleep(4000);
     }
 
 }

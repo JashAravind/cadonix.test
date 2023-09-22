@@ -222,7 +222,8 @@ public class UpdateCrossReference extends  BasePage{
         }
     }
 
-    public void checkPlugUpdateCrossReferencePartNumberValueFor(String combination) {
+    public void checkPlugUpdateCrossReferencePartNumberValueFor(String combination) throws InterruptedException {
+        Thread.sleep(2000);
         switch (combination) {
             case "1","2" -> {
                 System.out.println(connectorCavityTablePage.partNumber.getText());

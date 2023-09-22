@@ -1600,12 +1600,13 @@ public class ComponentDBStepDefinitions {
     }
 
     @And("User delete all old files from the default download folder")
-    public void userDeleteAllOldFilesFromTheDefaultDownloadFolder() throws IOException {
+    public void userDeleteAllOldFilesFromTheDefaultDownloadFolder() throws IOException, InterruptedException {
        String path=System.getProperty("user.dir") + File.separator + "externalFiles" + File.separator + "downloadFiles";
         File file = new File(path);
         if(file.exists()){
             FileUtils.cleanDirectory(file);
         }
+        Thread.sleep(3000);
     }
 
     @And("custom label macros tags are updated with {string}")

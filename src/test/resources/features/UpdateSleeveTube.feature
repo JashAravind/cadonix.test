@@ -1,5 +1,18 @@
-@regression @quickregresssion
+@regression @quickregresssion @hfb
 Feature: Update sleeve tube
+
+  Scenario: Test verifies ShowHideWireFan functionality on connector
+    Given I'm on Arcadia test environment
+    And test data config loaded for test identifier test1
+    And Navigated to quickstart project
+    And harness with name 'connectorValidator' is launched successfully
+    And based on drawing orchestrator components are created
+    And user sets label 'connector cavity table' to "Show"
+    And 'connector' list is initialized
+    And 'connectorplug' component with index '0' is opened
+    And user sets visibility of connector table layout to "Yes"
+    And Submit connector
+    Then User verifies the WireFan is ShownHidden successfully
 
   @UpdateSleeveTube
   Scenario: Sleeve tube parameter is displayed correctly when type "Conduit slit" is choosen -Global

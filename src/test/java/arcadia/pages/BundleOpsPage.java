@@ -5,12 +5,14 @@ import arcadia.domainobjects.Wire;
 import arcadia.domainobjects.WireProperties;
 import arcadia.utils.FormulaCalculator;
 import arcadia.utils.SeleniumCustomCommand;
+import io.cucumber.java.bs.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.FindBy;
+import org.python.antlr.ast.Str;
 import org.testng.Assert;
 
 import java.awt.*;
@@ -89,6 +91,13 @@ public class BundleOpsPage extends BasePage {
     private WebElement saveButton;
     @FindBy(css = "div.modal-footer button[data-bb-handler=\"confirm\"]")
     private WebElement confirmationPopUpOkButton;
+    @FindBy(css="#layer_80 > g.DG0.bundleGroup >g")private WebElement node1ChildElement;
+    @FindBy(css="#layer_80 > g.DG1.bundleGroup >g")private WebElement node2ChildElement;
+    @FindBy(css="#layer_80 > g.DG6.bundleGroup >g")private WebElement node3ChildElement;
+    @FindBy(css="#layer_85 > g.DG4.bundleGroup >g >text")private WebElement componentLabelClass;
+    @FindBy(css ="#layer_80 > g.DG11.bundleGroup >g")private WebElement node3ChildElementWithClip;
+    @FindBy(css ="#layer_50 > g.DGFRAME-44.bundleGroup >g")private WebElement frame1CoOrdinates;
+
     String expectedPathD = "M 12.01 26.45 L 191.56 26.45 L 191.56 26.45 L 193.74 26.55 L 195.9 26.83 L 198.03 27.3 L 200.11 27.96 L 202.13 28.79 L 204.06 29.8 L 205.9 30.97 L 207.63 32.3 L 209.24 33.77 L 210.71 35.38 L 212.04 37.11 L 213.21 38.95 L 214.22 40.88 L 215.05 42.9 L 215.71 44.98 L 216.18 47.11 L 216.46 49.27 L 216.56 51.45 L 216.56 51.45 L 216.56 175.1 L 216.56 175.1 L 216.46 177.28 L 216.18 179.44 L 215.71 181.57 L 215.05 183.65 L 214.22 185.67 L 213.21 187.6 L 212.04 189.44 L 210.71 191.17 L 209.24 192.78 L 207.63 194.25 L 205.9 195.58 L 204.06 196.75 L 202.13 197.76 L 200.11 198.59 L 198.03 199.25 L 195.9 199.72 L 193.74 200 L 191.56 200.1 L 191.56 200.1 L 37.46 200.1 L 37.46 200.1 L 35.28 200 L 33.12 199.72 L 30.99 199.25 L 28.91 198.59 L 26.89 197.76 L 24.96 196.75 L 23.12 195.58 L 21.39 194.25 L 19.78 192.78 L 18.31 191.17 L 16.98 189.44 L 15.81 187.6 L 14.8 185.67 L 13.97 183.65 L 13.31 181.57 L 12.84 179.44 L 12.56 177.28 L 12.46 175.1 L 12.46 175.1 L 12.46 75.36 L 12.46 75.36 L 12.56 73.18 L 12.84 71.02 L 13.31 68.89 L 13.97 66.81 L 14.8 64.79 L 15.81 62.86 L 16.98 61.02 L 18.31 59.29 L 19.78 57.68 L 21.39 56.21 L 23.12 54.88 L 24.96 53.71 L 26.89 52.7 L 28.91 51.87 L 30.99 51.21 L 33.12 50.74 L 35.28 50.46 L 37.46 50.36 L 37.46 50.36 L 173.74 50.36 L 173.74 50.36 L 175.92 50.46 L 178.08 50.74 L 180.21 51.21 L 182.29 51.87 L 184.31 52.7 L 186.24 53.71 L 188.08 54.88 L 189.81 56.21 L 191.42 57.68 L 192.89 59.29 L 194.22 61.02 L 195.39 62.86 L 196.4 64.79 L 197.23 66.81 L 197.89 68.89 L 198.36 71.02 L 198.64 73.18 L 198.74 75.36 L 198.74 75.36 L 198.74 139.02 L 198.74 139.02 L 198.64 141.2 L 198.36 143.36 L 197.89 145.49 L 197.23 147.57 L 196.4 149.59 L 195.39 151.52 L 194.22 153.36 L 192.89 155.09 L 191.42 156.7 L 189.81 158.17 L 188.08 159.5 L 186.24 160.67 L 184.31 161.68 L 182.29 162.51 L 180.21 163.17 L 178.08 163.64 L 175.92 163.92 L 173.74 164.02 L 173.74 164.02 L 62.27 164.02 L 62.27 164.02 L 60.09 163.92 L 57.93 163.64 L 55.8 163.17 L 53.72 162.51 L 51.7 161.68 L 49.77 160.67 L 47.93 159.5 L 46.2 158.17 L 44.59 156.7 L 43.12 155.09 L 41.79 153.36 L 40.62 151.52 L 39.61 149.59 L 38.78 147.57 L 38.12 145.49 L 37.65 143.36 L 37.37 141.2 L 37.27 139.02 L 37.27 139.02 L 37.27 88.44 L 37.27 88.44 L 37.37 86.26 L 37.65 84.1 L 38.12 81.97 L 38.78 79.89 L 39.61 77.87 L 40.62 75.94 L 41.79 74.1 L 43.12 72.37 L 44.59 70.76 L 46.2 69.29 L 47.93 67.96 L 49.77 66.79 L 51.7 65.78 L 53.72 64.95 L 55.8 64.29 L 57.93 63.82 L 60.09 63.54 L 62.27 63.44 L 62.27 63.44 L 149.38 63.44 L 149.38 63.44 L 151.56 63.54 L 153.72 63.82 L 155.85 64.29 L 157.93 64.95 L 159.95 65.78 L 161.88 66.79 L 163.72 67.96 L 165.45 69.29 L 167.06 70.76 L 168.53 72.37 L 169.86 74.1 L 171.03 75.94 L 172.04 77.87 L 172.87 79.89 L 173.53 81.97 L 174 84.1 L 174.28 86.26 L 174.38 88.44 L 174.38 88.44 L 174.38 114.66 L 174.38 114.66 L 174.28 116.84 L 174 119 L 173.53 121.13 L 172.87 123.21 L 172.04 125.23 L 171.03 127.16 L 169.86 129 L 168.53 130.73 L 167.06 132.34 L 165.45 133.81 L 163.72 135.14 L 161.88 136.31 L 159.95 137.32 L 157.93 138.15 L 155.85 138.81 L 153.72 139.28 L 151.56 139.56 L 149.38 139.66 L 149.38 139.66 L 87.3 139.66 L 87.3 139.66 L 85.12 139.56 L 82.96 139.28 L 80.83 138.81 L 78.75 138.15 L 76.73 137.32 L 74.8 136.31 L 72.96 135.14 L 71.23 133.81 L 69.62 132.34 L 68.15 130.73 L 66.82 129 L 65.65 127.16 L 64.64 125.23 L 63.81 123.21 L 63.15 121.13 L 62.68 119 L 62.4 116.84 L 62.3 114.66 L 62.3 114.66 L 62.3 114.37 L 62.3 114.37 L 62.4 112.19 L 62.68 110.03 L 63.15 107.9 L 63.81 105.82 L 64.64 103.8 L 65.65 101.87 L 66.82 100.03 L 68.15 98.3 L 69.62 96.69 L 71.23 95.22 L 72.96 93.89 L 74.8 92.72 L 76.73 91.71 L 78.75 90.88 L 80.83 90.22 L 82.96 89.75 L 85.12 89.47 L 87.3 89.37 L 87.3 89.37 L 135.6 89.37";
     SeleniumCustomCommand customCommand = new SeleniumCustomCommand();
     String x = "75", y = "75";
@@ -116,7 +125,6 @@ public class BundleOpsPage extends BasePage {
     public String bundleId() throws InterruptedException {
         Thread.sleep(10000);
         String bundleId = FlowContext.bundleIdentifierList.get(0).getBundleId();
-        ;
         System.out.println(bundleId);
         return bundleId;
     }
@@ -251,7 +259,7 @@ public class BundleOpsPage extends BasePage {
     }
 
     public void verifyChainDimensionIsCalculatedAsExpectedToTheBundleOrNot() {
-        Assert.assertEquals(layer100TextContent.getText(), "136.25 +/- 10", "chain dimension length is not as expected");
+        Assert.assertEquals(layer100TextContent.getText(), "136.25 0/+5", "chain dimension length is not as expected");
     }
 
     public void userTriesToCalculateDimensionBetweenTwoBundles() throws InterruptedException {
@@ -394,5 +402,74 @@ public class BundleOpsPage extends BasePage {
         Thread.sleep(1000);
         confirmationPopUpOkButton.click();
         saveButton.click();
+    }
+
+    public void userChangesConnectorFromOneNodeToAnotherNode() throws InterruptedException {
+        String id1 = node1ChildElement.getAttribute("id");
+        String id2 = node2ChildElement.getAttribute("id");
+        String frameCommand ="changenode " +id1+ " " +id2;
+        inputCommand(frameCommand);
+    }
+
+    public void verifyChaneNodeHasBeenPerformedAsExpected() {
+        Assert.assertEquals(componentLabelClass.getAttribute("class"),"complabel","Component label is not as expected");
+    }
+
+    public void userMovesOneEndOfBundleToAnotherBundle() throws InterruptedException {
+        inputCommand("freebundle 0 112.35mm,276.25mm 225.21mm,276.25mm");
+        Thread.sleep(2000);
+        String placeNodeCommand = "node 187,195";
+        inputCommand(placeNodeCommand);
+        Thread.sleep(2000);
+      moveEnd();
+    }
+
+    public void verifyLengthOfTheBundleIsBeenUpdatedAsExpected() {
+        Assert.assertEquals(complabel.getText(), "89.79", "Bundle length metric is not visible as expected");
+    }
+    public void moveEnd() throws InterruptedException {
+        Thread.sleep(2000);
+        String frameCommand = "movebundleend "+bundle1.getAttribute("id")+" "+"112.5mm,46.25mm"+" "+node3ChildElement.getAttribute("id");
+        System.out.println(frameCommand);
+        inputCommand(frameCommand);
+    }
+
+
+
+    public void userMovesOneEndOfBundleToAnotherBundleByAddingSomeVirtualComponents() throws InterruptedException {
+        Thread.sleep(2000);
+        inputCommand("freebundle 150 112.35mm,276.25mm 225.21mm,276.25mm");
+        Thread.sleep(2000);
+        inputCommand("insertcomp clip "+bundle1.getAttribute("id")+" 167.61,276.18 167.86,278.76");
+        Thread.sleep(2000);
+        String placeNodeCommand = "node 187,195";
+        inputCommand(placeNodeCommand);
+        Thread.sleep(2000);
+        String frameCommand = "movebundleend "+bundle1.getAttribute("id")+" "+"112.5mm,46.25mm"+" "+node3ChildElementWithClip.getAttribute("id");
+        System.out.println(frameCommand);
+        inputCommand(frameCommand);
+
+    }
+
+    public void verifyLengthOfTheBundleIsBeenUpdatedAsExpectedWhenPlacingVirtualComponents() {
+        Assert.assertEquals(complabel.getText(), "NTS150.00", "Bundle length metric is not visible as expected in not to scale value");
+    }
+
+    public void userMoveTheSkeletonRelativelyInHarness() throws InterruptedException {
+        String frameCommand ="moverelative "+getIdOfRelativeNode()+" 259mm,219mm";
+        inputCommand(frameCommand);
+        Thread.sleep(2000);
+    }
+
+    public void verifySkeletonCanMeMoveRelativelyWithoutMovingFrame() {
+        System.out.println(frame1CoOrdinates.getAttribute("transform"));
+        System.out.println(node1ChildElement.getAttribute("x"));
+    }
+    public String getIdOfRelativeNode()
+    {
+        WebElement ele=driver.findElement(By.xpath("//*[name()='g' and @id='layer_drawNodes']/*[name()='g'][15]"));
+        String id=ele.getAttribute("id");
+        id=id.substring(2);
+        return id;
     }
 }

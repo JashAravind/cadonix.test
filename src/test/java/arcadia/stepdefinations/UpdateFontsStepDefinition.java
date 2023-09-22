@@ -39,15 +39,17 @@ public class UpdateFontsStepDefinition {
         updateFontsPage.checkTheFontSizeIsAsPerTheProfileOrNot();
     }
     @Then("check the font size is as per the profile or not in bundle")
-    public void checkTheFontSizeIsAsPerTheProfileOrNotInBundle() {
+    public void checkTheFontSizeIsAsPerTheProfileOrNotInBundle() throws InterruptedException {
         updateFontsPage.checkTheFontSizeIsAsPerTheProfileOrNotInBundle();
     }
     @Then("check the font size is as per the profile or not in connector")
-    public void checkTheFontSizeIsAsPerTheProfileOrNotInConnector() {
+    public void checkTheFontSizeIsAsPerTheProfileOrNotInConnector() throws InterruptedException {
+        Thread.sleep(3000);
         updateFontsPage.checkTheFontSizeIsAsPerTheProfileOrNotInConnector();
     }
     @Then("check the font size is as per the profile or not in splice")
-    public void checkTheFontSizeIsAsPerTheProfileOrNotInSplice() {
+    public void checkTheFontSizeIsAsPerTheProfileOrNotInSplice() throws InterruptedException {
+        Thread.sleep(3000);
         updateFontsPage.checkTheFontSizeIsAsPerTheProfileOrNotInSplice();
     }
     @And("click Update fonts")
@@ -63,11 +65,13 @@ public class UpdateFontsStepDefinition {
 
     @Then("Check {string} is as per updated font size and font colour in the task")
     public void checkNodeChildElementIsAsPerUpdatedFontSizeAndFontColourInTheTask(String labelName) throws InterruptedException, AWTException {
+        Thread.sleep(3000);
         updateFontsPage.checkNodeChildElementIsAsPerUpdatedFontSizeAndFontColourInTheTask(labelName);
     }
 
     @Then("Check {string} is as per updated font size and font colour in the formboard")
     public void checkNodeNameIsAsPerUpdatedFontSizeAndFontColourInTheFormboard(String labelName) throws InterruptedException {
+       Thread.sleep(3000);
         updateFontsPage.changeFontSizeAndColourInFormBoard(labelName);
     }
 

@@ -175,4 +175,45 @@ public class BundleOpsStepDefinitions {
     public void resetToDefaults() throws InterruptedException {
         bundleOpsPage.resetToDefaults();
     }
+
+    @And("user changes connector from one node to another node")
+    public void userChangesConnectorFromOneNodeToAnotherNode() throws InterruptedException {
+        bundleOpsPage.userChangesConnectorFromOneNodeToAnotherNode();
+    }
+
+    @Then("verify change node has been performed as expected")
+    public void verifyChaneNodeHasBeenPerformedAsExpected() {
+        bundleOpsPage.verifyChaneNodeHasBeenPerformedAsExpected();
+    }
+
+    @And("user moves one end of bundle to another bundle")
+    public void userMovesOneEndOfBundleToAnotherBundle() throws InterruptedException {
+        bundleOpsPage.userMovesOneEndOfBundleToAnotherBundle();
+    }
+
+    @Then("verify length of the bundle is been updated as expected")
+    public void verifyLengthOfTheBundleIsBeenUpdatedAsExpected() {
+        bundleOpsPage.verifyLengthOfTheBundleIsBeenUpdatedAsExpected();
+    }
+
+    @And("user moves one end of bundle to another bundle by adding some virtual components")
+    public void userMovesOneEndOfBundleToAnotherBundleByAddingSomeVirtualComponents() throws InterruptedException {
+        bundleOpsPage.userMovesOneEndOfBundleToAnotherBundleByAddingSomeVirtualComponents();
+    }
+
+    @Then("verify length of the bundle is been updated as expected when placing virtual components")
+    public void verifyLengthOfTheBundleIsBeenUpdatedAsExpectedWhenPlacingVirtualComponents() {
+        bundleOpsPage.verifyLengthOfTheBundleIsBeenUpdatedAsExpectedWhenPlacingVirtualComponents();
+    }
+
+    @And("User move the skeleton relatively in harness")
+    public void userMoveTheSkeletonRelativelyInHarness() throws InterruptedException {
+        bundleOpsPage.userMoveTheSkeletonRelativelyInHarness();
+
+    }
+
+    @Then("verify skeleton can be move relatively without moving frame")
+    public void verifySkeletonCanMeMoveRelativelyWithoutMovingFrame() {
+        bundleOpsPage.verifySkeletonCanMeMoveRelativelyWithoutMovingFrame();
+    }
 }

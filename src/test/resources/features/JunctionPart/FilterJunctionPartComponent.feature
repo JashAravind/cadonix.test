@@ -1,4 +1,4 @@
-@regression
+@regression @componentdb
 Feature: Filter junction part components
 
   @JunctionPartComponentDB

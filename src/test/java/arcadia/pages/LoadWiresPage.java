@@ -27,7 +27,7 @@ public class LoadWiresPage extends BasePage {
     @FindBy(css = "button[title=\"Close\"]") public WebElement closeLoadWiresSummaryReport;
     @FindBy(css="#ui-accordion-accordion-panel-2 > div:nth-child(1) > label > input")private WebElement selectAllCheckBoXProperties;
     @FindBy(css="#ui-accordion-accordion-header-0")private WebElement loadWiresSubmitImportHeaderInformation;
-    @FindBy(css="div[id='rightPaneContent'] table[class='tablesorter']")private WebElement loadWiresSummary;
+    @FindBy(css="#rightPaneContent > h1")private WebElement loadWiresSummary;
     @FindBy(css="#layer_80 > g.DG2.bundleGroup > g > g > g > foreignObject > table > tbody > tr:nth-child(3) > td:nth-child(2)")private WebElement wireIdOf1stConnector;
     @FindBy(xpath = "//div[@id='accordion']")private WebElement loadWireWireImportInformationTab;
     @FindBy(css="#ireload")private WebElement refreshButton;
@@ -119,7 +119,7 @@ public class LoadWiresPage extends BasePage {
     public void  verifyLoadWiresSummaryAndWireImportInformation() throws InterruptedException {
         Assert.assertTrue(loadWiresTab.isDisplayed(),"Load Wires tab is not opened");
         Assert.assertTrue(loadWireWireImportInformationTab.isDisplayed(),"Load Wires import information is not displayed");
-        Assert.assertTrue(loadWiresSummary.isDisplayed(),"Load Wires summary information is not displayed");
+        Assert.assertEquals(loadWiresSummary.getText(),"LOAD WIRES FROM SCHEMATIC","Load Wires summary information is not displayed");
         verifyWireImportInformationImportTextColour();
         customCommand.scrollIntoView(driver,closeLoadWiresSummaryReport);
         customCommand.javaScriptClick(driver,closeLoadWiresSummaryReport);

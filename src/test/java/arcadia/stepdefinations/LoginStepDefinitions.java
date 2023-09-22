@@ -43,7 +43,7 @@ public class LoginStepDefinitions {
     }
 
     @Given("Navigated to selected componentDB")
-    public void navigated_to_selected_component_db() {
+    public void navigated_to_selected_component_db() throws InterruptedException {
         loginPage.load(EndPoint.COMPONENTDB.url.replace("databaseName",System.getProperty("componentDB")));
     }
     @And("Navigate to component DB Page")
@@ -60,7 +60,7 @@ public class LoginStepDefinitions {
         loginPage.load(EndPoint.PROJECTHOMEPAGE.url);
     }
     @And("Navigated to General task units")
-    public void navigatedToGeneralTaskUnits() {
+    public void navigatedToGeneralTaskUnits() throws InterruptedException {
         loginPage.load(EndPoint.TASKUNITS.url.replace("profileName",System.getProperty("profileName")));
     }
     @And("Turning Visibility on for Bundle Tolerance")
