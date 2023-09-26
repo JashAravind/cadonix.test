@@ -271,7 +271,7 @@ public class UpdateFontsPage extends BasePage {
         Assert.assertEquals(nodeAttachPartNameColour.getAttribute("value"),profileNodeFontColour,"Font Colour of node child element is not matched as per the profile updated");
     }
 
-    public void checkTheFontSizeIsAsPerTheProfileOrNotInBundle() {
+    public void checkTheFontSizeIsAsPerTheProfileOrNotInBundle() throws InterruptedException {
         Assert.assertEquals(bundleNameFontSize.getAttribute("value"),profileFontSizeBundle,"Bundle size of node child element is not matched as per the profile updated");
         Assert.assertEquals(bundleNameColor.getAttribute("value"),profileFontColourFormboardBundle,"Bundle Colour of node child element is not matched as per the profile updated");
         Assert.assertEquals(bundleLengthFontSize.getAttribute("value"),profileFontSizeBundle,"Bundle size of node child element is not matched as per the profile updated");
