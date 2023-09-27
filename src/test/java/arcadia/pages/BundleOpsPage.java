@@ -259,7 +259,7 @@ public class BundleOpsPage extends BasePage {
     }
 
     public void verifyChainDimensionIsCalculatedAsExpectedToTheBundleOrNot() {
-        Assert.assertEquals(layer100TextContent.getText(), "136.25 +/- 10", "chain dimension length is not as expected");
+        Assert.assertEquals(layer100TextContent.getText(), "136.25 0/+5", "chain dimension length is not as expected");
     }
 
     public void userTriesToCalculateDimensionBetweenTwoBundles() throws InterruptedException {

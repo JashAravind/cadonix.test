@@ -28,7 +28,7 @@ public class DriverFactory {
                 ChromeOptions options = new ChromeOptions();
                 options.setExperimentalOption("prefs", prefs);
                 options.addArguments("--remote-allow-origins=*");
-               // options.setBrowserVersion("118");
+               //options.setBrowserVersion("118");
                 driver = new ChromeDriver(options);
                 driver.manage().window().maximize();
                 break;
