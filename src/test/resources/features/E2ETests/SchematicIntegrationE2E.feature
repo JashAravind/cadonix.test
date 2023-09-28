@@ -1,4 +1,4 @@
-@E2E
+@E2E @e2e
 Feature: Verify schematics
   Background: User is Logged In
     Given I'm on Arcadia test environment

@@ -1,4 +1,4 @@
-@regression @NodeUpdateFonts
+@regression @NodeUpdateFonts @hfb
   Feature: Node Update Fonts
     Background: User is Logged In
       Given I'm on Arcadia test environment

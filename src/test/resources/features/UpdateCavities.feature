@@ -1,4 +1,4 @@
-@regression
+@regression @hfb
 Feature: Update Cavities
   Background: User is Logged In
     Given I'm on Arcadia test environment

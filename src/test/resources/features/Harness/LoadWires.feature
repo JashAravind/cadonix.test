@@ -1,4 +1,4 @@
-@regression @NodeOperation  @quickregression
+@regression @NodeOperation  @quickregression @hfb
 Feature: Load Wires
   Background:user logged in
     Given I'm on Arcadia test environment

@@ -1,4 +1,4 @@
-@regression  @quickregression
+@regression  @quickregression @hfb
 Feature: Filter attached parts
   Background: User is Logged In
     Given I'm on Arcadia test environment

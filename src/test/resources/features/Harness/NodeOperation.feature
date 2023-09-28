@@ -1,4 +1,4 @@
-@regression @quickregression
+@regression @quickregression @hfb
 Feature:Node Operations
 
   Scenario: Test verifies task can be created in metric by changing in profile

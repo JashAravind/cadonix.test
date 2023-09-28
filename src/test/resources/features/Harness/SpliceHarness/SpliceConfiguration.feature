@@ -1,4 +1,4 @@
-@spliceConfiguration @regression
+@spliceConfiguration @regression @hfb
   Feature: Splice Configuration
 
 

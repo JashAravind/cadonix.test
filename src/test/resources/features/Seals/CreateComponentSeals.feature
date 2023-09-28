@@ -1,4 +1,4 @@
-@regression @quickregression
+@regression @quickregression @componentdb
 Feature: Create seals components
 
   @SealComponentDB
