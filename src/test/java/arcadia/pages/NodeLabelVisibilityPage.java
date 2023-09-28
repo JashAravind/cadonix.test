@@ -33,7 +33,7 @@ public class NodeLabelVisibilityPage extends BasePage {
     @FindBy(css = "input[name=\"node.attachpart.partname\"]")private WebElement attachPartName;
     @FindBy(css="#ui-id-2")private WebElement variantOptions;
     @FindBy(css="#VO > fieldset > p:nth-child(1) > label:nth-child(2) > span > label > span.switch-label")private WebElement variants;
-    @FindBy(css = "#itree")private WebElement leftToggle;
+    @FindBy(xpath = "//span[@class='button-title' and text()='Left']") private WebElement leftToggle;
     @FindBy(css = "#layer_85 > g")private WebElement layer85;
     @FindBy(css = "input#nodeshow") private WebElement buttonShowNode;
     @FindBy(css="button[value='Save']")private WebElement profileSaveButton;
@@ -137,10 +137,10 @@ public class NodeLabelVisibilityPage extends BasePage {
                }
                case "attached parts variants": {
                    linkOtherParts();
-                   leftToggle.click();
+                   customCommand.javaScriptClick(driver,leftToggle);
                    variantOptions.click();
                    variants.click();
-                   leftToggle.click();
+                   customCommand.javaScriptClick(driver,leftToggle);
                    String identifier = FlowContext.nodeIdentifierList.get(0).getNodeElementId();
                    harnessPage.getNodeContextMenu(identifier);
                    new HarnessPage(driver).performOperation("inspect",identifier);
@@ -303,9 +303,9 @@ public class NodeLabelVisibilityPage extends BasePage {
         customCommand.pressKey(driver,"down");
         customCommand.pressKey(driver,"enter");
         customCommand.javaScriptClick(driver,buttonSubmitDetails);
-        leftToggle.click();
+        customCommand.javaScriptClick(driver,leftToggle);
         variantOptions.click();
         variants.click();
-        leftToggle.click();
+        customCommand.javaScriptClick(driver,leftToggle);
     }
 }

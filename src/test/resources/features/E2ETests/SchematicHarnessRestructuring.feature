@@ -1,4 +1,4 @@
-@E2E
+@E2E @e2e
 Feature: Verify harness created from schematic can be restructured
   Background: User is Logged In
     Given I'm on Arcadia test environment

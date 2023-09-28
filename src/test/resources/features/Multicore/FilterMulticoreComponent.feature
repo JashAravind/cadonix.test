@@ -1,4 +1,4 @@
-@Regression
+@regression @componentdb
 Feature: Filter multicore components
 
   @MulticoreComponentDB

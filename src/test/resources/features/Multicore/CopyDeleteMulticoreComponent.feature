@@ -1,4 +1,4 @@
-@Regression
+@regression @componentdb
 Feature: Copy and Delete multicore components
 
   @MulticoreComponentDB

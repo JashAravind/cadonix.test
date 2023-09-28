@@ -1,4 +1,4 @@
-@E2ENew1
+@E2ENew1 @hfb @e2e
 Feature: This feature verifies the Cross Reference Part Updation and Update Image All features
   Background: User is Logged In
     Given I'm on Arcadia test environment

@@ -17,13 +17,10 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
-                <!--                <configuration>
-                                    <parallel>methods</parallel>
-                                    <threadCount>3</threadCount>
-                                </configuration>-->
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.1.2</version>
             </plugin>
         </plugins>
     </build>
@@ -35,16 +32,30 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.0.0-RC1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.asynchttpclient/async-http-client -->
+        <dependency>
+            <groupId>org.asynchttpclient</groupId>
+            <artifactId>async-http-client</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230618</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.0.0-rc-3</version>
+            <version>4.11.0</version>
         </dependency>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-handler</artifactId>
-            <version>4.1.69.Final</version>
+            <version>4.1.96.Final</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
         <dependency>
@@ -70,6 +81,17 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-devtools</artifactId>
             <version>4.0.0-rc-1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>32.1.2-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-json</artifactId>
+            <version>4.11.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -109,11 +131,6 @@
             <version>0.8.1</version>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.4</version>
-        </dependency>
-        <dependency>
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>4.1</version>
@@ -144,11 +161,13 @@
             <artifactId>jsonp-jaxrs-1x</artifactId>
             <version>2.0.0-RC3</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish/jakarta.json -->
         <dependency>
             <groupId>org.glassfish</groupId>
-            <artifactId>jsonp-jaxrs-1x</artifactId>
-            <version>2.0.0-RC3</version>
+            <artifactId>jakarta.json</artifactId>
+            <version>2.0.1</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>

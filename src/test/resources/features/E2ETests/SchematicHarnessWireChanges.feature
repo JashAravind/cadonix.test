@@ -1,4 +1,4 @@
-@E2ENew
+@E2ENew @e2e
 Feature: Verify cavity harness can be restructured, imported and exported
   Background: User is Logged In
     Given I'm on Arcadia test environment

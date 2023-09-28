@@ -21,4 +21,5 @@ public class SpliceCavityTableLabelStepDefinitions {
     public void verifySpliceCavityLabelIsVisibleOrNot(String labelName, String visibleHide) throws InterruptedException, AWTException, JsonProcessingException {
         spliceCavityTablePage.verifySplicerCavityTableIsVisibleOrNot(labelName, visibleHide);
     }
+
 }

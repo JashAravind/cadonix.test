@@ -1,4 +1,4 @@
-@Regression @UpdateCrossReference
+@regression @UpdateCrossReference @hfb
   Feature: Update Cross Reference
    Scenario: Test to create a additional references
      Given I'm on Arcadia test environment

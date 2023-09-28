@@ -33,6 +33,7 @@ public class PageFactoryManager {
     private static UpdateImagePage updateImagePage;
     private static LoadWiresPage loadWiresPage;
     private static BundleOpsPage bundleOpsPage;
+    private static SpliceConfigPage spliceConfigPage;
 
     public static SearchPartsDatabasePage getPartsDatabasePage(WebDriver driver){
         return searchPartsDatabasePage == null ? new SearchPartsDatabasePage(driver) : searchPartsDatabasePage;
@@ -122,6 +123,9 @@ public class PageFactoryManager {
     }
     public static BundleOpsPage getBundleOpsPage(WebDriver driver){
         return bundleOpsPage == null ? new BundleOpsPage(driver) :bundleOpsPage;
+    }
+    public static SpliceConfigPage getSpliceConfig(WebDriver driver){
+        return spliceConfigPage == null ? new SpliceConfigPage(driver) :spliceConfigPage;
     }
 
 }

@@ -39,7 +39,7 @@ public class UpdateFontsStepDefinition {
         updateFontsPage.checkTheFontSizeIsAsPerTheProfileOrNot();
     }
     @Then("check the font size is as per the profile or not in bundle")
-    public void checkTheFontSizeIsAsPerTheProfileOrNotInBundle() {
+    public void checkTheFontSizeIsAsPerTheProfileOrNotInBundle() throws InterruptedException {
         updateFontsPage.checkTheFontSizeIsAsPerTheProfileOrNotInBundle();
     }
     @Then("check the font size is as per the profile or not in connector")

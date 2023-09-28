@@ -1,4 +1,4 @@
-@Regression
+@regression @componentdb
 Feature: Link Junction Parts
 
   @JunctionPartsComponentDB

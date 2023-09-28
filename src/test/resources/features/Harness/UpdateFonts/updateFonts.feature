@@ -1,4 +1,4 @@
-@Regression @UpdateFonts
+@regression @UpdateFonts @quickregression @hfb
 Feature: Update Fonts
   Background: User is Logged In
     Given I'm on Arcadia test environment
@@ -17,9 +17,9 @@ Feature: Update Fonts
     Then Check 'bundle sub dimension' is as per updated font size and font colour in the formboard
     And User exits the drawing page
     And Accept alert
-    And User deletes Harness 'Node update fonts' successfully
+    And User deletes Harness 'Bundle sub dimension update fonts' successfully
 
-  Scenario:Test verify bundle break font amd colour
+  Scenario:Test verify bundle break font and colour
     And test data config loaded for test identifier test12
     And Navigated to quickstart project
     And harness with name 'Bundle break update fonts' is launched successfully
@@ -30,7 +30,7 @@ Feature: Update Fonts
     Then Check 'bundle break' is as per updated font size and font colour in the task
     And User exits the drawing page
     And Accept alert
-    And User deletes Harness 'Node update fonts' successfully
+    And User deletes Harness 'Bundle break update fonts' successfully
 
   Scenario: Test verify connector cavity table font and colour
     And test data config loaded for test identifier test9
@@ -56,7 +56,7 @@ Feature: Update Fonts
     Then Check 'splice cavity table font' is as per updated font size and font colour in the task
     And User exits the drawing page
     And Accept alert
-    And User deletes Harness 'Connector cavity table fonts' successfully
+    And User deletes Harness 'Splice cavity table fonts' successfully
 
   Scenario: Test verify connector label font and colour
     And test data config loaded for test identifier test9
@@ -72,7 +72,7 @@ Feature: Update Fonts
     Then Check 'connector label' is as per updated font size and font colour in the formboard
     And User exits the drawing page
     And Accept alert
-    And User deletes Harness 'Connector cavity table fonts' successfully
+    And User deletes Harness 'Connector Label fonts' successfully
 
   Scenario: Test verify harness label font and colour
     And test data config loaded for test identifier test9
@@ -90,14 +90,14 @@ Feature: Update Fonts
     Then Check 'harness label' is as per updated font size and font colour in the formboard
     And User exits the drawing page
     And Accept alert
-    And User deletes Harness 'Connector cavity table fonts' successfully
+    And User deletes Harness 'Harness Label fonts' successfully
 
   Scenario: Test verify bom table font
     And test data config loaded for test identifier test9
     And Navigated to form board update font in profile page
     And change colour and font size of 'Bom Table Font' in formboard
     And Navigated to quickstart project
-    And harness with name 'bom table fonts' is launched successfully
+    And harness with name 'Bom table fonts' is launched successfully
     And based on drawing orchestrator components are created
     And Place 'bom' table in harness
     And click Update fonts
@@ -109,7 +109,7 @@ Feature: Update Fonts
     Then Check 'bom table' is as per updated font size and font colour in the formboard
     And User exits the drawing page
     And Accept alert
-    And User deletes Harness 'bom table fonts' successfully
+    And User deletes Harness 'Bom table fonts' successfully
 
   Scenario: Test verify manufacturing table font
     And test data config loaded for test identifier test102
@@ -162,12 +162,12 @@ Feature: Update Fonts
     And Change font size and colour in the task for 'revision table font'
     Then Check 'revision table' is as per updated font size and font colour in the task
     And User exits the drawing page
-    And User deletes Harness 'Wire table fonts' successfully
+    And User deletes Harness 'Revision table fonts' successfully
 
   Scenario: Test verify variant table font
     And test data config loaded for test identifier test13
     And Navigated to form board update font in profile page
-    And change colour and font size of 'Variant Table Font' in formboard
+    And change colour and font size of 'Variant Table Fonts' in formboard
     And Save the profile settings
     And Navigated to quickstart project
     And harness with name 'Variant table fonts' is launched successfully

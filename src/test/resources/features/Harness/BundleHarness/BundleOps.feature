@@ -1,7 +1,13 @@
-@Regression @BundleOps
+@regression @BundleOps  @quickregression @hfb
 Feature: Bundle Operation
   Background: User is Logged In
     Given I'm on Arcadia test environment
+
+  Scenario: Test verifies task can be created in metric by changing in profile
+    And  Navigated to General task units
+    And  Changing General units to 'metric'
+    And Navigated to bundle default display
+    Then Reset to defaults
 
   Scenario: Test verifies add bend and remove bend in bundle
     And Navigated to quickstart project

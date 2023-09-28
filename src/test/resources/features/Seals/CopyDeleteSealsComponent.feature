@@ -1,4 +1,4 @@
-@Regression
+@regression @quickregression @componentdb
 Feature: Copy and Delete seal components
 
   @sealComponentDB

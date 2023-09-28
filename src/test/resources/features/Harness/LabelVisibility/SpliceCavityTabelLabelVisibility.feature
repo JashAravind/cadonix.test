@@ -1,4 +1,4 @@
-@Regression @SpliceCavityTableLabelVisibility
+@regression @SpliceCavityTableLabelVisibility @hfb
 Feature: Splice Cavity Table Label Visibility
   Background:  Background: User is Logged In
     Given I'm on Arcadia test environment

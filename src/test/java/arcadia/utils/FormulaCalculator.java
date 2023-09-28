@@ -2,6 +2,8 @@ package arcadia.utils;
 
 import org.decimal4j.util.DoubleRounder;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class FormulaCalculator {
@@ -45,5 +47,15 @@ public class FormulaCalculator {
     public Double getReference(Double diameterScales, Double diameterAddon, Double baseValue){
         return Double.valueOf((Math.round((baseValue*diameterScales)+diameterAddon)));
     }
+    private static final DecimalFormat decfor = new DecimalFormat("0.00");
+
+    public String getSpliceFitPercentageASide(Double bundleDiameterASide, Double sleeveTubeRecoverDiameter){
+                decfor.setRoundingMode(RoundingMode.UP);
+                return decfor.format(bundleDiameterASide *100/sleeveTubeRecoverDiameter);
+            }
+            public Double getSpliceFitPercentageBSide(Double bundleDiameterBSide,Double sleeveTubeRecoverDiameter){
+                decfor.setRoundingMode(RoundingMode.UP);
+                return (bundleDiameterBSide *100/sleeveTubeRecoverDiameter);
+           }
 
 }

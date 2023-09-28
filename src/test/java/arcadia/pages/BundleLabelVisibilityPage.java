@@ -62,7 +62,7 @@ public class BundleLabelVisibilityPage  extends BasePage {
                     System.out.println(complabel.getText());
                 }
                 case "bundle tolerance inch" -> {
-                    Assert.assertEquals(complabel.getText(),"5.15 (+/-0.39)","Bundle tolerance is not visible as expected");
+                    Assert.assertEquals(complabel.getText(),"5.15 (0/+0.2)","Bundle tolerance is not visible as expected");
                     System.out.println(complabel.getText());
                 }
                 case "wire bundle diameter inch" ->{
@@ -145,11 +145,11 @@ public class BundleLabelVisibilityPage  extends BasePage {
                 }
                 case "formboard bundle piece id length mm" ->{
                     System.out.println(coveringDetails.getText());
-                    Assert.assertEquals(coveringDetails.getText(),"130.83","Bundle Piece length in metric task is not visible as expected");
+                    Assert.assertEquals(coveringDetails.getText(),"130.83mm","Bundle Piece length in metric task is not visible as expected");
                 }
                 case "formboard bundle piece id length inch" ->{
                     System.out.println(coveringDetails.getText());
-                    Assert.assertEquals(coveringDetails.getText(),"5.15","Bundle Piece length in imperial is not visible as expected");
+                    Assert.assertEquals(coveringDetails.getText(),"5.15\"","Bundle Piece length in imperial is not visible as expected");
                 }
                 case "formboard bundle covering pn" -> {
                     System.out.println(coveringDetails.getText());

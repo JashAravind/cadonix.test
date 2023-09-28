@@ -1,4 +1,4 @@
-@Regression
+@regression @hfb
 Feature: Filter harness parts
   Background: User is Logged In
     Given I'm on Arcadia test environment

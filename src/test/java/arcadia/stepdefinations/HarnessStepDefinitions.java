@@ -15,6 +15,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.hu.Ha;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
 import java.awt.*;
@@ -56,6 +57,7 @@ public class HarnessStepDefinitions {
         String harnessDescription = connectorDescription.concat(" "+ new StringHelper().generateRandomDigit());
         createNewHarnessInstance(harnessDescription);
         getHarnessDescription = harnessDescription;
+        Thread.sleep(4000);
     }
 
     private void createNewHarnessInstance(String connectorDescription) throws InterruptedException {
@@ -71,6 +73,7 @@ public class HarnessStepDefinitions {
         harnessData.setWorkTask(new StringHelper().generateRandomDigit().toString());
         FlowContext.testDescription = connectorDescription;
         createHarness.submitHarnessData(new Harness(harnessData.getWorkTask(), harnessData.getTitle(), harnessData.getDescription(), harnessData.getPartNumber(), harnessData.getRevision(), harnessData.getComponentDB(),harnessData.getProfile()));
+        Thread.sleep(4000);
     }
 
     private void openExistingHarness(String connectorDescription) {

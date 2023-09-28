@@ -1,4 +1,4 @@
-@Regression @BundleLabelVisibility
+@regression @BundleLabelVisibility @hfb
 Feature: Bundle Label Visibility and Update Fonts
   Background: User is Logged In
     Given I'm on Arcadia test environment

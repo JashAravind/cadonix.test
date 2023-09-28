@@ -1,4 +1,4 @@
-@Regression
+@regression @hfb
 Feature: Verify Harness Components
   Background: User is Logged In
     Given I'm on Arcadia test environment

@@ -70,12 +70,6 @@ public class LoginStepDefinitions {
 
     @And("Navigating to Company profile page")
     public void navigateToSettings() throws InterruptedException {
-        loginPage.load(EndPoint.SETTINGS.url);
-        try {
-            context.driver.switchTo().alert().accept();
-        }catch(org.openqa.selenium.NoSuchElementException e){
-            Thread.sleep(2000);
-        }
         loginPage.load(EndPoint.BUNDLEDEFAULTDISPLAY.url.replace("profileName",System.getProperty("profileName")));
         Thread.sleep(1000);
         new DefineBundleTolerance(context.driver).CaptureModifyBundleTolerance();
@@ -261,5 +255,18 @@ public class LoginStepDefinitions {
     @And("Navigated to form board update font in profile page")
     public void navigatedToFormBoardUpdateFonts() {
         loginPage.load(EndPoint.FORMBOARDUPDATFONTS.url.replace("profileName",System.getProperty("profileName")));
+    }
+    @And("Navigated to profile splice configuration")
+    public void navigateToSpliceConfiguration(){
+        loginPage.load(EndPoint.PROFILESPLICECONFIG.url.replace("profileName",System.getProperty("profileName")));
+    }
+    @And("Navigated to material  gauge editor")
+    public void navigateToMaterialGauge(){
+        loginPage.load(EndPoint.MATERIALGAUGEEDITORPVC.url.replace("profileName",System.getProperty("profileName")));
+
+    }
+    @And("Navigated to bundle default display")
+    public void navigatedToBundleDefaultDisplay(){
+        loginPage.load(EndPoint.BUNDLEDEFAULTDISPLAY.url.replace("profileName",System.getProperty("profileName")));
     }
 }

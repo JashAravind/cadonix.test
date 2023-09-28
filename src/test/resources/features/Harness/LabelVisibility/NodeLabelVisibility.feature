@@ -1,4 +1,4 @@
-@Regression @NodeLabelVisibility
+@regression @NodeLabelVisibility @hfb
 Feature: Node Label Visibility
   Background: User is Logged In
     Given I'm on Arcadia test environment

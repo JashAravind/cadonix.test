@@ -1,4 +1,4 @@
-@Regression
+@regression  @quickregression @componentdb
 Feature: Create components
 
  @ComponentDB
