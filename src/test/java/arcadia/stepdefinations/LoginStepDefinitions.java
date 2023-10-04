@@ -269,4 +269,8 @@ public class LoginStepDefinitions {
     public void navigatedToBundleDefaultDisplay(){
         loginPage.load(EndPoint.BUNDLEDEFAULTDISPLAY.url.replace("profileName",System.getProperty("profileName")));
     }
+    @And("Navigated to bom table settings in profile")
+    public void navigatedToBOMTableSettings(){
+        loginPage.load(EndPoint.BOMTABLESETTINGS.url.replace("profileName",System.getProperty("profileName")));
+    }
 }

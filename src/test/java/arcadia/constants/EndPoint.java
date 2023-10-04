@@ -26,7 +26,9 @@ public enum EndPoint {
     PROJECTHOMEPAGE("/index.lp?app=projects2"),
     PROFILESPLICECONFIG("/index.lp?app=generaledit&appoption=3&section=Splice%20Configuration&mainsection=Component+DB&profilecode=profileName"),
     MATERIALGAUGEEDITORPVC("/index.lp?app=materialedit&appoption=3&matname=PVC&profilecode=profileName&section=Material%20Editor&mainsection=General"),
+    BOMTABLESETTINGS("/index.lp?app=generaledit&appoption=4&suboption=3&section=BOM%20Table%20Settings&mainsection=Harness&profilecode=profileName&subsection=BOM%20Table%20Settings"),
     SCHEMATICWIREPROPERTIES("/index.lp?app=generaledit&appoption=3&section=Signal%20Properties&mainsection=Schematic&profilecode=profileName");
+
     public final String url;
     EndPoint(String url) {
         this.url = url;
